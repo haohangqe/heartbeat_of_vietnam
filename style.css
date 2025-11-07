@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #000;
+  color: #E0E8F0;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* Navigation Bar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(10, 31, 68, 0.9);
+  /*backdrop-filter: blur(8px);*/
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  opacity: 1;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #fff;
+  text-shadow: 0 0 8px #A3D5FF;
+}
+
+/* Header */
+.header {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.header-background img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+}
+
+
+.main-title {
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: white;
+}
+
+/* Sections */
+.section {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #E0E8F0;
+  font-family: "Helvetica", sans-serif;
+}
+
+.section h2 {
+  color: #A3D5FF;
+  font-size: 2.3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.section p {
+  color: #E0E8F0;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height:1.8;
+}
+
+
+
+/* ========== SECTION 1: WELCOME ========== */
+.section-1 .content {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section-1 .image-row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.section-1 .image-row img {
+  width: auto;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  opacity: 0.9;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.section-1 .image-row img:hover {
+  transform: scale(1.02);
+  opacity: 1;
+}
+
+/* ========== SECTION 2: MEMORIES ========== */
+.section-2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.section-2 .content {
+  flex: 1 1 45%;
+  text-align: left;
+}
+
+.section-2 .image-column {
+  flex: 1 1 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.section-2 .image-column img {
+  width: 85%;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  opacity: 0.85;
+}
+.section-2 .image-column img:hover {
+  transform: scale(1.02);
+  opacity: 1;
+}
+
+/* ========== SECTION 3: FUN FACTS ========== */
+/* Section 3: 2 images hai bên, chữ ở giữa */
+.section-3 {
+  display: flex;
+  align-items: center; /* canh giữa theo chiều dọc */
+  justify-content: center;
+  gap: 2rem; /* khoảng cách giữa hình và chữ */
+  flex-wrap: wrap; /* khi màn hình nhỏ sẽ xếp xuống */
+}
+
+.section-3 .image-column-left,
+.section-3 .image-column-right {
+  flex: 1 1 25%; /* chiếm khoảng 20% width, giữ hình nhỏ */
+  display: flex;
+  justify-content: center;
+}
+
+.section-3 .image-column-left img,
+.section-3 .image-column-right img {
+  width: 100%;
+  height: auto; /* giữ tỉ lệ gốc */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.section-3 .content {
+  flex: 1 1 40%; /* chiếm 50% width */
+  text-align: center; /* chữ ở giữa */
+}
+
+.section-3 .content ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  display: inline-block; /* để canh center */
+  text-align: left;
+  max-width: 100%;
+}
+.section-3 .image-column-left img:hover,
+.section-3 .image-column-right img:hover {
+  transform: scale(1.02);
+  opacity: 1;
+}
+
+/* ========== SECTION 4: REFLECTIONS ========== */
+/* Section 4: 2 images hai bên, chữ ít ở giữa */
+.section-4 {
+  display: flex;
+  align-items: center; /* chữ bắt đầu từ trên, không canh giữa chiều dọc */
+  justify-content: flex-start;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.section-4 .image-column-left {
+  flex: 1 1 40%; 
+  display: flex;
+  justify-content: center;
+}
+
+.section-4 .image-column-left img {
+  width: 45%;
+  height: auto; /* giữ tỉ lệ */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.section-4 .content {
+  flex: 1 1 60%; /* chữ chiếm 40% */
+  text-align: center;
+  max-width: 500px;
+}
+
+.section-4 .image-column-left img:hover {
+  transform: scale(1.02);
+  opacity: 1;
+}
+/* ========== SECTION 5: CONCLUSION / ARTICLES ========== */
+.section-5 .content{
+  text-align: center;
+}
+.section-5 .article-row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.article-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #A3D5FF;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 300px; /* chiều ngang card */
+}
+
+.article-card img {
+  width: 100%;
+  height: auto; /* giữ tỷ lệ hình */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.article-card h3 {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(163,213,255,0.3);
+  color: #fff;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .section-2,
+  .section-3,
+  .section-4 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section-4 .content {
+    text-align: center;
+  }
+
+  .section img {
+    width: 100%;
+  }
+
+  .section-5 .article-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  background: #0A1F44;
+  color: #A3D5FF;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+  background: #083D5C;
+  color: #fff;
+  box-shadow: 0 0 12px #A3D5FF;
+}
+
+/* Cards */
+.card {
+  background: #0A1F44;
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(163, 213, 255, 0.2);
+}
+
+/* Footer */
+.footer {
+  background: #0A1F44;
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #A3D5FF;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(163, 213, 255, 0.2);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+/* ================================
+📱 RESPONSIVE DESIGN
+================================ */
+
+/* Màn hình trung bình (Tablet, <1024px) */
+@media (max-width: 1024px) {
+.navbar ul {
+gap: 1.5rem;
+}
+
+.main-title {
+font-size: 2.8rem;
+}
+
+.subtitle {
+font-size: 1.1rem;
+}
+
+.section {
+padding: 5rem 2rem;
+}
+
+.section h2 {
+font-size: 2rem;
+}
+}
+
+/* Màn hình nhỏ (Điện thoại, <768px) */
+@media (max-width: 768px) {
+/* Chung */
+body {
+font-size: 0.95rem;
+line-height: 1.6;
+}
+
+.navbar ul {
+flex-wrap: wrap;
+justify-content: center;
+gap: 1rem;
+}
+
+.main-title {
+font-size: 2.2rem;
+}
+
+.subtitle {
+font-size: 1rem;
+}
+
+.section {
+padding: 3.5rem 1rem;
+text-align: center;
+}
+
+.section h2 {
+font-size: 1.8rem;
+}
+
+/* Section 1: Ảnh nhỏ hơn, xếp dọc khi quá hẹp */
+.section-1 .image-row {
+flex-direction: column;
+gap: 1.5rem;
+}
+
+.section-1 .image-row img {
+width: 100%;
+height: auto;
+}
+
+/* Section 2: Hình & chữ xếp dọc */
+.section-2 {
+flex-direction: column;
+gap: 2rem;
+}
+
+.section-2 .content,
+.section-2 .image-column {
+flex: 1 1 100%;
+text-align: center;
+}
+
+/* Section 3: Hai hình + chữ giữa → chuyển thành xếp dọc */
+.section-3 {
+flex-direction: column;
+align-items: center;
+gap: 2rem;
+}
+
+.section-3 .image-column-left,
+.section-3 .image-column-right {
+flex: 1 1 100%;
+display: flex;
+justify-content: center;
+}
+
+.section-3 img {
+width: 90%;
+height: auto;
+}
+
+.section-3 .content {
+flex: 1 1 100%;
+text-align: center;
+max-width: 90%;
+}
+
+/* Section 4: Hình trái + chữ phải → xếp dọc, canh giữa */
+.section-4 {
+flex-direction: column;
+align-items: center;
+gap: 2rem;
+}
+
+.section-4 .image-column-right,
+.section-4 .image-column-left {
+flex: 1 1 100%;
+display: flex;
+justify-content: center;
+}
+
+.section-4 img {
+width: 90%;
+height: auto;
+}
+
+.section-4 .content {
+flex: 1 1 100%;
+text-align: center;
+max-width: 90%;
+}
+
+/* Section 5: Articles xếp dọc + chữ giữa */
+.section-5 .content {
+text-align: center;
+}
+
+.section-5 .article-row {
+flex-direction: column;
+gap: 1.2rem;
+align-items: center;
+}
+
+.section-5 .article-row a {
+font-size: 1rem;
+}
+
+/* Nút, Card, Footer */
+.button {
+padding: 0.6rem 1.2rem;
+font-size: 0.95rem;
+}
+
+.card {
+padding: 1.5rem;
+margin: 1rem 0;
+}
+
+.footer {
+font-size: 0.8rem;
+padding: 1.5rem;
+}
+}
+
+/* Màn hình cực nhỏ (rất nhỏ, <480px) */
+@media (max-width: 480px) {
+.main-title {
+font-size: 1.8rem;
+}
+
+.subtitle {
+font-size: 0.9rem;
+}
+
+.navbar ul {
+flex-direction: column;
+gap: 0.8rem;
+}
+
+.section {
+padding: 3rem 0.8rem;
+}
+
+.section h2 {
+font-size: 1.5rem;
+}
+}
